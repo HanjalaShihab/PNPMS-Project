@@ -64,5 +64,3 @@ print()
 #10 - what is the standard deviation of recovered cases across countries?
 x = covid_data['Recovered'].std()
 print(x)
-
-
