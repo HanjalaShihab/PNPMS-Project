@@ -1,7 +1,4 @@
 import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 
 covid_data = pd.read_csv('1st project/data/country_wise_latest.csv')
@@ -62,3 +59,10 @@ print()
 x = covid_data['Deaths'].median()
 print(x)
 print()
+
+
+#10 - what is the standard deviation of recovered cases across countries?
+x = covid_data['Recovered'].std()
+print(x)
+
+
