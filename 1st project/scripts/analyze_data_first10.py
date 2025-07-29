@@ -43,7 +43,22 @@ print()
 #6 - which country has the highest number of recovery count?
 x = covid_data.loc[covid_data['Recovered'].idxmax()]
 print(x)
+print()
 
 
 #7 - which country has the highest number of active cases?
-x = covid_data.loc[covid_data['Active']]
+x = covid_data.loc[covid_data['Active'].idxmax()]
+print(x)
+print()
+
+
+#8 - what is the average number of confirmed cases per country?
+x = covid_data['Confirmed'].mean()
+print(x)
+print()
+
+
+#9 - What is the median number of deaths per country?
+x = covid_data['Deaths'].median()
+print(x)
+print()
