@@ -6,7 +6,7 @@ covid_data = pd.read_csv('1st project/data/country_wise_latest.csv')
 
 print(covid_data.head())
 
-#plot a bar chart of top 10 countries with the most deaths:
+#12 - plot a bar chart of top 10 countries with the most deaths:
 x = covid_data.sort_values(by= 'Deaths', ascending= False).head(10)
 print(x)
 
