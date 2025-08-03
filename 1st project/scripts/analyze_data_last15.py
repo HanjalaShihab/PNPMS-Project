@@ -59,3 +59,9 @@ print(x)
 x = covid_data[['New deaths', 'New cases']]
 print(x.corr())
 print()
+
+
+#25 - identify countries with more than 80% recovery rate?
+x = covid_data['Recovered / 100 Cases'] > 80
+final = covid_data[x][['Country/Region','Recovered / 100 Cases']].values.tolist()
+print(final)
