@@ -40,3 +40,13 @@ print()
 x = covid_data.sort_values(by= '1 week % increase', ascending= False)
 y = x[['Country/Region', '1 week % increase']].head(5)
 print(y)
+print()
+
+
+#which countries have zero new cases?
+x = covid_data['New cases'] == 0
+final = covid_data[x][['Country/Region', 'New cases']].values
+print(final)
+print()
+
+
