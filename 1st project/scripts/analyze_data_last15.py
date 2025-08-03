@@ -43,10 +43,13 @@ print(y)
 print()
 
 
-#which countries have zero new cases?
+#22- which countries have zero new cases?
 x = covid_data['New cases'] == 0
 final = covid_data[x][['Country/Region', 'New cases']].values
 print(final)
 print()
 
 
+#23 - how many countries belong to each WHO Region?
+x = covid_data.groupby(['WHO Region'])['Country/Region'].count().sort_values(ascending= False)
+print(x)
