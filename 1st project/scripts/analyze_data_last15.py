@@ -34,3 +34,9 @@ print()
 x = (covid_data['Active'].sum() / covid_data['Confirmed'].sum()) * 100
 print(f"{x:.2f}%")
 print()
+
+
+#21 - what are the top 5 countries with the highest new case growth?(1 week % increase)
+x = covid_data.sort_values(by= '1 week % increase', ascending= False)
+y = x[['Country/Region', '1 week % increase']].head(5)
+print(y)
