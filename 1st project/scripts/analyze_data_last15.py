@@ -65,9 +65,18 @@ print()
 x = covid_data['Recovered / 100 Cases'] > 80
 final = covid_data[x][['Country/Region','Recovered / 100 Cases']].values.tolist()
 print(final)
+print()
 
 
 #26 - Identify countries with more than 5% death rate:
 x = covid_data['Deaths / 100 Cases'] > 5
 final = covid_data[x][['Country/Region', 'Deaths / 100 Cases']]
 print(final.to_string())
+print()
+
+
+#27 - what is the total number of countries in the dataset?
+x = covid_data['Country/Region'].count()
+print(f"Total number of countries is {x}")
+print(covid_data.shape[0])
+print()
