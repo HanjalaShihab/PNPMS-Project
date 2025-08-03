@@ -53,3 +53,9 @@ print()
 #23 - how many countries belong to each WHO Region?
 x = covid_data.groupby(['WHO Region'])['Country/Region'].count().sort_values(ascending= False)
 print(x)
+
+
+#24 - what is the relationship between new deaths and new cases(correlation)?
+x = covid_data[['New deaths', 'New cases']]
+print(x.corr())
+print()
