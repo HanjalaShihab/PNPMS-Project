@@ -28,3 +28,9 @@ print()
 x = covid_data[covid_data['Country/Region'] == "Bangladesh"]['Recovered / 100 Cases'].values[0]
 print(f"{x}%")
 print()
+
+
+#20 - what percentage of confirmed cases are active globally?
+x = (covid_data['Active'].sum() / covid_data['Confirmed'].sum()) * 100
+print(f"{x:.2f}%")
+print()
