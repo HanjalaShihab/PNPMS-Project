@@ -80,3 +80,8 @@ x = covid_data['Country/Region'].count()
 print(f"Total number of countries is {x}")
 print(covid_data.shape[0])
 print()
+
+
+#28 - what is the global death to recovery ratio?
+x = covid_data['Deaths'].sum() / covid_data['Recovered'].sum()
+print(f"{x:.2f}")
