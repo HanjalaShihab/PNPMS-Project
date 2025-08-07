@@ -48,4 +48,9 @@ print(f"{avg:.2f}")
 print()
 
 
-#7 - 
+#7 - what is the median opening price?
+avg = stock['Open'].median()
+print(f"{avg:.2f}")
+print()
+
+
