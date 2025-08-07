@@ -54,3 +54,18 @@ print(f"{avg:.2f}")
 print()
 
 
+#8 - What is the standard deviation of the closing prices?
+std = stock['Close'].std()
+print(f"{std:.2f}")
+print()
+
+
+#9 - What was the stock price change (percentage) from the first to the last date?
+first_close = stock['Close'].iloc[0]
+last_close = stock['Close'].iloc[-1]
+
+
+pct_change = ((last_close - first_close) / first_close) * 100
+
+print(f"Stock price changed by {pct_change:.2f}% from {stock['Date'].iloc[0]} to {stock['Date'].iloc[-1]}")
+print()
