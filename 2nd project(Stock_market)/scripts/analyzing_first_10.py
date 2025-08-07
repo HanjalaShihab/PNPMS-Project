@@ -69,3 +69,11 @@ pct_change = ((last_close - first_close) / first_close) * 100
 
 print(f"Stock price changed by {pct_change:.2f}% from {stock['Date'].iloc[0]} to {stock['Date'].iloc[-1]}")
 print()
+
+
+#10 - What is the daily return (percentage) for each day?
+stock['Daily return(%)'] = stock['Close'].pct_change() * 100
+print(stock[['Date', 'Close', 'Daily return(%)']].head())
+print()
+
+
