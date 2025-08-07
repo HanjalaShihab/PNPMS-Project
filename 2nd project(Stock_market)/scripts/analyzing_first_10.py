@@ -42,3 +42,10 @@ print(highestVolume[['Date', 'Volume']])
 print()
 
 
+#6 - what is the average closing price over the entire dataset?
+avg = stock['Close'].mean()
+print(f"{avg:.2f}")
+print()
+
+
+#7 - 
