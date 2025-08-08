@@ -77,3 +77,6 @@ print(stock[['Date', 'Close', 'Daily return(%)']].head())
 print()
 
 
+#11 - Calculate the 7-day moving average of closing prices?
+stock['7 day moving avg'] = stock['Close'].rolling(window=(7)).mean()
+print(stock[['Date','Close','7 day moving avg']].dropna().head(10))
