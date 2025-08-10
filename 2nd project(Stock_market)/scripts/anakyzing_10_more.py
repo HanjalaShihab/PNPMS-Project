@@ -20,4 +20,18 @@ print()
 x = stock.dropna()
 closeHigher = x[x['Close'] > x['30 day moving avg']]
 print(closeHigher[['Date', 'Close', '30 day moving avg']].head(10))
+print()
+
+
+#14 - On how many days did the stock close higher than it opened?
+days_higher_close = (stock['Close'] > stock['Open']).sum()
+print("Number of days stock closed higher than it opened:", days_higher_close)
+print()
+
+
+#15 - On how many days did the stock close lower than it opened?
+days_lower_close = (stock['Close'] < stock['Open']).sum()
+print("Number of days stock closed lower than it opened", days_lower_close)
+print()
+
 
