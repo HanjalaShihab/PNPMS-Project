@@ -35,3 +35,17 @@ print("Number of days stock closed lower than it opened", days_lower_close)
 print()
 
 
+#16 - What is the rolling 7-day standard deviation (volatility)?
+stock['7 day rolling std'] = stock['Close'].rolling(window= 7).std()
+print(stock[['Date', 'Close', '7 day rolling std']].head())
+print()
+
+
+#17 - Identify the top 5 most volatile days based on daily price range (High - Low)?
+stock['Daily range'] = stock['High'] - stock['Low']
+top5 = stock.sort_values(by = 'Daily range', ascending= False).head()
+
+
+#18 - What is the correlation between volume and closing price?
+correlation = stock['Volume'].corr(stock['Close'])
+print(correlation)
