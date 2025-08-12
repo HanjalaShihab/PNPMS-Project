@@ -71,3 +71,11 @@ daily_return_std = stock['Daily return'].std()
 print(f"Daily return average: {daily_return_avg:.2f}")
 print(f"Daily return standard deviation: {daily_return_std:.2f}")
 print()
+
+
+#21 - What is the average closing price per month?
+stock['Date'] = pd.to_datetime(stock['Date'])
+
+monthly_avg_close = stock.groupby(stock['Date'].dt.to_period('M'))['Close'].mean()
+
+print(monthly_avg_close)
