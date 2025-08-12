@@ -49,3 +49,11 @@ top5 = stock.sort_values(by = 'Daily range', ascending= False).head()
 #18 - What is the correlation between volume and closing price?
 correlation = stock['Volume'].corr(stock['Close'])
 print(correlation)
+
+
+#19 - What is the maximum drawdown during the period?
+cumulative_max = stock['Close'].cummax()
+drawdown = (stock['Close'] - cumulative_max) / cumulative_max
+max_drawdown = drawdown.min() * 100 
+
+print(f"Maximum drawdown: {max_drawdown:.2f}%")
