@@ -44,11 +44,13 @@ print()
 #17 - Identify the top 5 most volatile days based on daily price range (High - Low)?
 stock['Daily range'] = stock['High'] - stock['Low']
 top5 = stock.sort_values(by = 'Daily range', ascending= False).head()
+print()
 
 
 #18 - What is the correlation between volume and closing price?
 correlation = stock['Volume'].corr(stock['Close'])
-print(correlation)
+print(f"{correlation:.4f}")
+print()
 
 
 #19 - What is the maximum drawdown during the period?
@@ -57,3 +59,15 @@ drawdown = (stock['Close'] - cumulative_max) / cumulative_max
 max_drawdown = drawdown.min() * 100 
 
 print(f"Maximum drawdown: {max_drawdown:.2f}%")
+print()
+
+
+#20 - What is the average daily return and standard deviation of daily return?
+stock['Daily return'] = stock['Close'].pct_change()
+
+daily_return_avg = stock['Daily return'].mean()
+daily_return_std = stock['Daily return'].std()
+
+print(f"Daily return average: {daily_return_avg:.2f}")
+print(f"Daily return standard deviation: {daily_return_std:.2f}")
+print()
