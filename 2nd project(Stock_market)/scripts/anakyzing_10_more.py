@@ -79,3 +79,5 @@ stock['Date'] = pd.to_datetime(stock['Date'])
 monthly_avg_close = stock.groupby(stock['Date'].dt.to_period('M'))['Close'].mean()
 
 print(monthly_avg_close)
+
+
